@@ -6,6 +6,36 @@
         meanMenuContainer: '.mobile-menu'
     });
 
+    // Show the button after scrolling down
+    $(window).on('scroll', function () {
+        var $backToTopButton = $('#backToTop');
+        if ($(window).scrollTop() > 200) {
+            $backToTopButton.css({ 'opacity': '1', 'visibility': 'visible' });
+        } else {
+            $backToTopButton.css({ 'opacity': '0', 'visibility': 'hidden' });
+        }
+    });
+
+    // Scroll to the top when button is clicked
+    $('#backToTop').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 'smooth');
+    });
+    // menu sticky 
+    $(window).on('scroll', function () {
+        var $menu = $('.header');
+        var scrollTop = $(window).scrollTop(); // Get the vertical scroll position
+
+        // Check if the scroll has passed the top of the menu
+        if (scrollTop > 200) { // You can adjust this value based on your layout
+            $menu.addClass('fixed');
+        } else {
+            $menu.removeClass('fixed');
+        }
+    });
+
+
+
+
     // testimonial carousel
     $('.testimonial-list-container .owl-carousel').owlCarousel({
         loop: true,

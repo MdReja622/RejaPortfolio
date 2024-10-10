@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&family=Urbanist:wght@400;500;600;700&display=swap');
+
 /* -------------------------------------------
 Table of Index
 --------------
@@ -1253,6 +1255,16 @@ header {
 
 .header {
     padding: 25px 0px;
+}
+
+.header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
@@ -3196,4 +3208,28 @@ header {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
+}
+
+.back-to-top {
+    position: fixed;
+    z-index: 99;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--orange-color);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #496aff;
 }

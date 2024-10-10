@@ -3,35 +3,43 @@
     .portfolio-three-carousel .owl-theme .owl-stage {
         left: 210px;
     }
+
     .portfolio-fullwidth .portfolio-massonary-items img {
         height: 100%;
     }
-    .portfolio-fullwidth .portfolio-massonary-two-items img{
+
+    .portfolio-fullwidth .portfolio-massonary-two-items img {
         height: 500px;
     }
+
     .portfolio-fullwidth .portfolio-massonary-four-items img {
         height: 700px;
     }
+
     .home-one-title {
         padding-right: 18%;
     }
-
 }
+
 /* responsive code for big desktop */
 @media only screen and (max-width: 2100px) {
     .h1-home-4 {
         font-size: 75px;
     }
+
     .home-two-about-bg-circle {
         left: 9%;
     }
+
     .portfolio-fullwidth .portfolio-massonary-four-items img {
         height: 500px;
     }
+
     .home-one-title {
         padding-right: 10%;
     }
 }
+
 /* responsive code for small desktop */
 @media only screen and (max-width: 1536px) {
     .sidebar-navigation {
@@ -73,16 +81,22 @@
         width: 140px;
         right: -8%;
     }
+
     .h1-home-4 {
         font-size: 65px;
         padding-right: 10%;
     }
+
     .home-two-about-bg-circle {
         left: 5%;
     }
-    .portfolio-fullwidth .portfolio-massonary-items img, .portfolio-fullwidth .portfolio-massonary-two-items img, .portfolio-fullwidth .portfolio-massonary-four-items img {
+
+    .portfolio-fullwidth .portfolio-massonary-items img,
+    .portfolio-fullwidth .portfolio-massonary-two-items img,
+    .portfolio-fullwidth .portfolio-massonary-four-items img {
         height: 300px;
     }
+
     .home-one-title {
         padding-right: 0%;
     }
@@ -111,45 +125,57 @@
         margin-left: 15px;
         padding-right: calc((100% - 1116px)/4);
     }
+
     .home-four-banner-experience {
         right: -6%;
     }
+
     .home-four-banner-figma {
         right: -6%;
     }
+
     .h1-home-4 {
         font-size: 50px;
         padding-right: 0;
     }
+
     .about-four-line-shape {
         width: 99%;
         left: 0.5%;
         top: 10.5%;
     }
+
     .h1-home-2 {
         font-size: 55px;
     }
+
     .about-two-img {
         width: 100%;
         height: auto;
     }
+
     .home-two-about-bg-circle {
         width: 100%;
         left: 0;
     }
+
     .banner-three-badge {
         bottom: -12%;
         left: 60%;
     }
+
     .portfolio-one-first-img {
         height: 295px !important;
     }
+
     .service-slider-container .owl-carousel .owl-item img {
         height: 480px;
     }
+
     .logo img {
         width: 90px;
     }
+
     header .orange-btn {
         background-color: transparent;
         color: var(--black-color) !important;
@@ -159,15 +185,18 @@
         padding: 0;
         font-weight: 700;
     }
+
     header .btn_effect::before {
         display: none;
-    } 
+    }
+
     header .btn_effect::after {
         display: none;
-    } 
+    }
+
     .home-one-title {
         font-size: 60px;
-        padding-right:18%;
+        padding-right: 18%;
     }
 }
 
@@ -195,7 +224,7 @@
     }
 
     .header {
-        padding: 0px 0px 50px 0px;
+        padding: 10px 0px;
     }
 
     header {
@@ -440,41 +469,52 @@
     .portfolio-three .owl-carousel .owl-nav {
         right: 0;
     }
+
     .h1-home-4 {
         font-size: 47px;
     }
+
     .h1-home-2 {
         font-size: 60px;
     }
+
     .home-two-about-bg-circle {
         width: 94%;
         left: 8%;
         bottom: -2%;
     }
+
     .counter-wrapper {
         padding: 55px 0px 105px 0px;
     }
+
     .portfolio-archieve {
         padding: 200px 0px 130px 0px;
     }
+
     .blog-card-two-img {
         height: auto;
     }
+
     .blog-card-three-img {
         height: auto;
     }
+
     .single-blog-contents {
         padding: 200px 0px 130px 0px;
     }
+
     .portfolio-one-first-img {
         height: 245px !important;
     }
+
     .service-slider-container .owl-carousel .owl-item img {
         height: 420px;
     }
+
     .home-one-title {
         font-size: 50px;
-        padding-right:10%;
+        padding-right: 10%;
     }
 }
 
@@ -751,49 +791,63 @@
     .portfolio-three-carousel .owl-theme .owl-stage {
         left: 0;
     }
+
     .home-four-banner-img-col {
         background-position: -40px 120px;
     }
+
     .about-four-line-shape {
         width: 82%;
         left: 9%;
         top: 10%;
     }
+
     .h1-home-2 {
         font-size: 55px;
     }
+
     .home-two-banner-circle {
         width: 65%;
         left: 12%;
     }
+
     .home-two-about-bg-circle {
         width: 90%;
         left: 5%;
     }
+
     .testimonial-list-container .owl-stage {
         left: 25.5%;
     }
+
     .footer-top {
         padding: 90px 0px;
     }
+
     .testimonial-black-bg {
         padding: 90px 0px;
     }
+
     .home-three-body .partners {
         padding: 90px 0px 45px 0px;
     }
+
     .cta-container {
         padding: 60px 10%;
     }
+
     .blog-card-three-img {
         height: auto;
     }
+
     .cta-container-two {
         padding: 0% 10%;
     }
+
     .control {
         font-size: 14px;
     }
+
     .footer-top {
         padding: 90px 0px;
     }
@@ -1239,40 +1293,51 @@
         width: 96%;
         height: 89.5%;
     }
+
     .home-four-banner-img-col {
         background-position: -25px 120px;
     }
+
     .h1-home-4 {
         font-size: 43px;
     }
+
     .h1-home-2 {
         font-size: 50px;
     }
+
     .home-two-banner-circle {
         width: 80%;
         left: 2%;
     }
+
     .home-two-about-bg-circle {
         width: 80%;
         left: 10%;
     }
+
     .testimonial-list-container .owl-stage {
         left: 0;
     }
+
     .resume-four-skill-title {
         padding-left: 10px;
         padding-right: 10px;
     }
+
     .education-experience-nav-tab {
         flex-direction: column;
     }
+
     .footer-top {
         padding: 65px 0px;
     }
+
     .blog-content-body-quotation {
         padding: 30px 35px;
     }
 }
+
 /* responsive code for extra small devices */
 @media only screen and (max-width: 325px) {
     .about-four-line-shape {
