@@ -1,25 +1,65 @@
 (function ($) {
     "use strict";
+
+
+    //////////////////////////////////////
     // mobile Menu area
     $('.mobile-menu nav').meanmenu({
         meanScreenWidth: "1030",
         meanMenuContainer: '.mobile-menu'
     });
 
-    // Show the button after scrolling down
+
+    //////////////////////////////////////
+    //  Back to top with progress circular 
+    // get refference 
+    var progressPath = $('.progress-wrap path'),
+        pathLength = progressPath[0].getTotalLength(),
+        offset = 50,
+        duration = 550;
+
+    progressPath.css({
+        'transition': 'none',
+        'strokeDasharray': pathLength,
+        'strokeDashoffset': pathLength
+    }).get(0).getBoundingClientRect();
+    progressPath.css('transition', 'stroke-dashoffset 200ms linear');
+
     $(window).on('scroll', function () {
-        var $backToTopButton = $('#backToTop');
-        if ($(window).scrollTop() > 200) {
-            $backToTopButton.css({ 'opacity': '1', 'visibility': 'visible' });
-        } else {
-            $backToTopButton.css({ 'opacity': '0', 'visibility': 'hidden' });
-        }
+        var scroll = $(this).scrollTop(),
+            height = $(document).height() - $(this).height(),
+            progress = pathLength - (scroll * pathLength / height);
+
+        progressPath.css('strokeDashoffset', progress);
+
+        $('.progress-wrap').toggleClass('active-progress', scroll > offset);
     });
 
-    // Scroll to the top when button is clicked
-    $('#backToTop').on('click', function () {
-        $('html, body').animate({ scrollTop: 0 }, 'smooth');
+    $('.progress-wrap').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, duration);
     });
+
+    ///////////////////////////////////////
+
+
+
+    //////////////////////////////////////
+    // // smoth scrolling 
+    $(window).on("mousewheel DOMMouseScroll", function (event) {
+        event.preventDefault();
+
+        var scrollDelta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+        var scrollSpeed = 100; // Increase this value for faster scrolling (adjust as needed)
+
+        $('html, body').stop().animate({
+            scrollTop: $(window).scrollTop() - (scrollDelta * scrollSpeed)
+        }, 30, 'linear'); // Reduce the duration (50ms) for smoother scrolling
+    });
+
+
+
+    //////////////////////////////////////
     // menu sticky 
     $(window).on('scroll', function () {
         var $menu = $('.header');
@@ -35,7 +75,7 @@
 
 
 
-
+    //////////////////////////////////////
     // testimonial carousel
     $('.testimonial-list-container .owl-carousel').owlCarousel({
         loop: true,
