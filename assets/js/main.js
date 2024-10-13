@@ -44,18 +44,7 @@
 
 
 
-    //////////////////////////////////////
-    // // smoth scrolling 
-    $(window).on("mousewheel DOMMouseScroll", function (event) {
-        event.preventDefault();
 
-        var scrollDelta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-        var scrollSpeed = 100; // Increase this value for faster scrolling (adjust as needed)
-
-        $('html, body').stop().animate({
-            scrollTop: $(window).scrollTop() - (scrollDelta * scrollSpeed)
-        }, 30, 'linear'); // Reduce the duration (50ms) for smoother scrolling
-    });
 
 
 
@@ -336,5 +325,58 @@
         $('.loader').fadeOut();
         $('.loader-mask').delay(350).fadeOut('slow');
     });
+
+
+
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    if ($('#smooth-wrapper').length && $('#smooth-content').length) {
+
+        gsap.config({
+            nullTargetWarn: false,
+        });
+
+        let smoother = ScrollSmoother.create({
+            smooth: 1.35,
+            effects: true,
+            smoothTouch: 0.1,
+            normalizeScroll: false,
+            ignoreMobileResize: true,
+        });
+    }
+
+
+    if ($('.rs-title_anim').length > 0) {
+        let splitTitleLines = gsap.utils.toArray(".rs-title_anim");
+        splitTitleLines.forEach(splitTextLine => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: splitTextLine,
+                    start: 'top 90%',
+                    end: 'bottom 60%',
+                    scrub: false,
+                    markers: false,
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            const itemSplitted = new SplitText(splitTextLine, { type: "words, lines" });
+            gsap.set(splitTextLine, { perspective: 400 });
+
+            itemSplitted.split({ type: "lines" })
+            tl.from(itemSplitted.lines, {
+                duration: 1,
+                delay: 0.3,
+                opacity: 0,
+                rotationX: -80,
+                force3D: true,
+                transformOrigin: "top center -50",
+                stagger: 0.1
+            });
+        });
+    }
+
+
+
 
 })(jQuery);
