@@ -3260,9 +3260,16 @@ header {
     transition: all 200ms linear;
 }
 
+.footer-email {
+    font-size: 18px;
+}
 
-.test {
-    background: red;
-    height: 300px;
-    width: 300px;
+#home {
+    margin-top: 137px;
+}
+
+.header {
+    padding: 25px 0px;
+    z-index: 9999;
+    position: relative;
 }

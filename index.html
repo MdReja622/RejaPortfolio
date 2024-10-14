@@ -38,72 +38,76 @@
 </head>
 
 <body class="home-one-body">
+
+    <!-- start header -->
+    <header class="bg-white header">
+        <!-- mobile header nav -->
+        <div class="mobile-menu d-block d-md-none">
+            <nav>
+                <ul class="menu">
+                    <li><a href="#home">Home</a>
+                    </li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a>
+                    </li>
+                    <li><a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li><a href="#testimonial">Testimonial</a>
+                    </li>
+                    <li><a href="#blog">Blog</a>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container d-none d-md-block">
+            <div class="header-wrapper d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/img/logo/Logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="header-menu-wrapper main-menu">
+                    <!-- nav menu -->
+                    <nav class="desktop-nav">
+                        <ul class="header-menu d-flex flex-row justify-content-center menu">
+                            <li class="px-2 px-lg-3 ">
+                                <a class="menu-link" href="#home">Home</a>
+                            </li>
+                            <li class="px-2 px-lg-3 ">
+                                <a class="menu-link" href="#about">About</a>
+                            </li>
+                            <li class="px-2 px-lg-3 ">
+                                <a class="menu-link" href="#services">Services</a>
+                            </li>
+                            <li class="px-2 px-lg-3 ">
+                                <a class="menu-link" href="#portfolio">Portfolio</a>
+                            </li>
+                            <li class="px-2 px-lg-3 ">
+                                <a class="menu-link" href="#testimonial">Testimonial</a>
+                            </li>
+                            <li class="px-2 px-lg-3 ">
+                                <a class="menu-link" href="#blog">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- header button -->
+                <div class="header-btn-wrapper">
+                    <a class="btn orange-btn btn_effect" href="#contact">
+                        <span class="z-1 position-relative">contact us</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+
+
+
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <main class="home overflow-x-hidden">
-                <!-- start header -->
-                <header class="bg-white header">
-                    <!-- mobile header nav -->
-                    <div class="mobile-menu d-block d-md-none">
-                        <nav>
-                            <ul class="menu">
-                                <li><a href="#home">Home</a>
-                                </li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#services">Services</a>
-                                </li>
-                                <li><a href="#portfolio">Portfolio</a>
-                                </li>
-                                <li><a href="#testimonial">Testimonial</a>
-                                </li>
-                                <li><a href="#blog">Blog</a>
-                                </li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="container d-none d-md-block">
-                        <div class="header-wrapper d-flex justify-content-between align-items-center">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="assets/img/logo/Logo.png" alt="logo">
-                                </a>
-                            </div>
-                            <div class="header-menu-wrapper main-menu">
-                                <!-- nav menu -->
-                                <nav class="desktop-nav">
-                                    <ul class="header-menu d-flex flex-row justify-content-center menu">
-                                        <li class="px-2 px-lg-3 ">
-                                            <a class="menu-link" href="#home">Home</a>
-                                        </li>
-                                        <li class="px-2 px-lg-3 ">
-                                            <a class="menu-link" href="#about">About</a>
-                                        </li>
-                                        <li class="px-2 px-lg-3 ">
-                                            <a class="menu-link" href="#services">Services</a>
-                                        </li>
-                                        <li class="px-2 px-lg-3 ">
-                                            <a class="menu-link" href="#portfolio">Portfolio</a>
-                                        </li>
-                                        <li class="px-2 px-lg-3 ">
-                                            <a class="menu-link" href="#testimonial">Testimonial</a>
-                                        </li>
-                                        <li class="px-2 px-lg-3 ">
-                                            <a class="menu-link" href="#blog">Blog</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <!-- header button -->
-                            <div class="header-btn-wrapper">
-                                <a class="btn orange-btn btn_effect" href="#contact">
-                                    <span class="z-1 position-relative">contact us</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-                <!-- end header -->
 
                 <!-- start banner -->
                 <section class="home-banner position-relative" id="home">
@@ -171,7 +175,7 @@
                             <div class="col-12">
                                 <div class="row align-items-center">
                                     <div class="about-image-col col-12 col-lg-6 text-center">
-                                        <div class="img-overlay mx-auto mx-lg-0 br-6 ">
+                                        <div class="img-overlay mx-auto mx-lg-0 br-6 parallax-image">
                                             <img class="img-fluid" src="assets/img/about/about.jpg" alt="about image">
                                         </div>
                                     </div>
@@ -258,7 +262,7 @@
                                             </div>
                                         </div>
                                         <a data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500"
-                                            class="btn btn_effect home-banner-btn orange-btn mt-50"
+                                            target="_blank" class="btn btn_effect home-banner-btn orange-btn mt-50"
                                             href="assets/img/logo/Md Rejaul Karim Resume.pdf"><span
                                                 class="position-relative z-1">Download My CV</span>
                                         </a>
@@ -1731,7 +1735,7 @@
                                                 I'm Rejaul Karim, a frontend developer specializing in HTML, CSS, and
                                                 JavaScript, creating responsive and engaging websites. Let's connect!
                                             </p>
-                                            <h3 class="h3 fw-500 line-height-3 text-white fw-500">
+                                            <h3 class="h3 fw-500 line-height-3 text-white fw-500 footer-email">
                                                 mdrejaulkarim622626@gmail.com
                                             </h3>
                                         </div>
@@ -1840,6 +1844,7 @@
                                                     </a>
                                                 </p>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
